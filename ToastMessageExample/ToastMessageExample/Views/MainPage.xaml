@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             x:Class="ToastMessageExample.Views.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="20,2" />
+            <Setter Property="TextTransform" Value="None" />
+        </Style>
+    </ContentPage.Resources>
+        
+    <StackLayout>
+
+        <Label Text="Press button to show toast message"
+               FontSize="18"
+               Margin="10"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Short toast message"
+                Command="{Binding ShowShortAlertCommand}"/>
+        
+        <Button Text="Long toast message"
+                Command="{Binding ShowLongAlertCommand}"/>
+
+    </StackLayout>
+
+</ContentPage>
